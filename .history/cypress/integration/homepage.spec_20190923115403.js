@@ -1,6 +1,6 @@
 describe ("homepage", ()=>{
     beforeEach(()=>{
-        cy.visit("https://beta-aol.ao-qa.com/");
+        cy.visit("www.ao.com");
     })
 
     describe('Deals button works correctly', ()=>{
