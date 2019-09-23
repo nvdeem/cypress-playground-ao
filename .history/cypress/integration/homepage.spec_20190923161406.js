@@ -15,7 +15,7 @@ describe ("homepage", ()=>{
             cy.get("#searchAOL").type("f");
             cy.get('#ui-id-1').should('be.visible');
         })
-        it('Should redirect to relevant page after searching', ()=>{
+        it.only('Should redirect to relevant page after searching', ()=>{
             cy.get("#searchAOL").type("fridge freezer").type('{enter}');
             cy.url().should('include', 'fridge', 'freezer');
         })

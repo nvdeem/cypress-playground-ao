@@ -10,14 +10,14 @@ describe ("homepage", ()=>{
         })
     })
     
-    describe('Search works correctly', ()=>{
+    describe.only('Search works correctly', ()=>{
         it('Should show dropdown suggestions after 1 characters', ()=>{
             cy.get("#searchAOL").type("f");
             cy.get('#ui-id-1').should('be.visible');
         })
         it('Should redirect to relevant page after searching', ()=>{
             cy.get("#searchAOL").type("fridge freezer").type('{enter}');
-            cy.url().should('include', 'fridge', 'freezer');
+            cy.url().should('include', 'fridge').and('include', 'freezer');
         })
     })
 

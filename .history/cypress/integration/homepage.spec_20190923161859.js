@@ -17,7 +17,7 @@ describe ("homepage", ()=>{
         })
         it('Should redirect to relevant page after searching', ()=>{
             cy.get("#searchAOL").type("fridge freezer").type('{enter}');
-            cy.url().should('include', 'fridge', 'freezer');
+            cy.url().should('include', 'fridge');
         })
     })
 
