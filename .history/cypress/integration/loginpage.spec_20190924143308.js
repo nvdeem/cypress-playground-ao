@@ -1,6 +1,8 @@
 import LoginPage from '../elements/pages/LoginPage';
+import MyAccount from '../elements/pages/MyAccount';
 
 const login = new LoginPage();
+const myAccount = new MyAccount();
 
 describe('Log in functionality', () => {
 	it('should error when end user inputs an unrecognised email and password', () => {
@@ -20,9 +22,11 @@ describe('Log in functionality', () => {
 		login.inputPassword('&zcX&k0G6N2');
 		login.submitLogin();
 		cy.wait(1000);
-		cy.url().should(
-			'contain',
-			'https://beta-aol-account.ao-qa.com/home/order-history'
-		);
+		myAccount
+			.url()
+			.should(
+				'contain',
+				'https://beta-aol-account.ao-qa.com/home/order-history'
+			);
 	});
 });

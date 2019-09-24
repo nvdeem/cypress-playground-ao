@@ -5,12 +5,12 @@ class LoginPage {
 		cy.visit('https://beta-aol-account.ao-qa.com/login');
 	}
 
-	inputEmail(email) {
-		cy.get('#input-email').type(email);
+	inputIncorrectEmail() {
+		cy.get('#input-email').type('wrong@email.com');
 	}
 
-	inputPassword(password) {
-		cy.get('#input-password').type(password);
+	inputPassword() {
+		cy.get('#input-password').type('secret');
 	}
 
 	submitLogin() {
