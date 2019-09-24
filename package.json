@@ -11,5 +11,8 @@
   "dependencies": {
     "cypress": "^3.4.1",
     "cypress-xpath": "^1.4.0"
+  },
+  "devDependencies": {
+    "cypress-page-object": "^1.0.0"
   }
 }
