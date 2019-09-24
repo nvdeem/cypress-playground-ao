@@ -23,5 +23,6 @@ describe('Log in page tests', () => {
 			.submit()
 			.errorMessage()
 			.should('contain', "We don't recognise this email address or password.");
+		Cypress.currentTest.retries(2);
 	});
 });

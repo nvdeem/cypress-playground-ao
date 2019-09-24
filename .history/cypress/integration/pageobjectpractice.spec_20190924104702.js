@@ -1,6 +1,7 @@
 import { page, visitable, fillable, clickable } from 'cypress-page-object';
 
-//-PAGE-//
+//--PAGES--//
+
 const loginPage = page({
 	visit: visitable('https://beta-aol-account.ao-qa.com/login'),
 	fillEmail: fillable('#input-email'),

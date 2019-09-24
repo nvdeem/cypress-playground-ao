@@ -9,6 +9,10 @@ const loginPage = page({
 
 	errorMessage() {
 		return cy.get('.u-c--error');
+	},
+
+	wait() {
+		cy.wait(200);
 	}
 });
 
@@ -21,6 +25,7 @@ describe('Log in page tests', () => {
 			.fillEmail('wrongemail@ao.com')
 			.fillPassword('wrongpassword')
 			.submit()
+			.wait()
 			.errorMessage()
 			.should('contain', "We don't recognise this email address or password.");
 	});

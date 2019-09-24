@@ -1,16 +1,6 @@
 import { page, visitable, fillable, clickable } from 'cypress-page-object';
 
-//-PAGE-//
-const loginPage = page({
-	visit: visitable('https://beta-aol-account.ao-qa.com/login'),
-	fillEmail: fillable('#input-email'),
-	fillPassword: fillable('#input-password'),
-	submit: clickable('[data-testid=submit-login]'),
-
-	errorMessage() {
-		return cy.get('.u-c--error');
-	}
-});
+//--PAGES--//
 
 //-TESTS-//
 
