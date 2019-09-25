@@ -1,13 +1,13 @@
 import LoginPage from '../elements/pages/LoginPage';
+import fixtures from '../fixtures/fixtures';
 
 const loginPg = new LoginPage();
-
-Cypress.env('RETRIES', 2);
+const fixt = new fixtures();
 
 describe('Log in functionality', () => {
 	it('should error when end user inputs an unrecognised email and password', () => {
 		loginPg.visit();
-		loginPg.inputEmail('wrong@email.com');
+		loginPg.inputEmail(cy.fixture(name));
 		loginPg.inputPassword('secret');
 		loginPg.submitLogin();
 		cy.wait(500);
@@ -21,7 +21,6 @@ describe('Log in functionality', () => {
 		loginPg.inputEmail('qatestao@gmail.com');
 		loginPg.inputPassword('&zcX&k0G6N2');
 		loginPg.submitLogin();
-		cy.wait(500);
 		cy.url().should(
 			'contain',
 			'https://beta-aol-account.ao-qa.com/home/order-history'

@@ -1,8 +1,7 @@
 import LoginPage from '../elements/pages/LoginPage';
 
-const loginPg = new LoginPage();
-
 Cypress.env('RETRIES', 2);
+const loginPg = new LoginPage();
 
 describe('Log in functionality', () => {
 	it('should error when end user inputs an unrecognised email and password', () => {
@@ -10,7 +9,7 @@ describe('Log in functionality', () => {
 		loginPg.inputEmail('wrong@email.com');
 		loginPg.inputPassword('secret');
 		loginPg.submitLogin();
-		cy.wait(500);
+		cy.wait(1000);
 		loginPg
 			.errorMessage()
 			.should('contain', "We don't recognise this email address or password.");
@@ -21,7 +20,7 @@ describe('Log in functionality', () => {
 		loginPg.inputEmail('qatestao@gmail.com');
 		loginPg.inputPassword('&zcX&k0G6N2');
 		loginPg.submitLogin();
-		cy.wait(500);
+		cy.wait(1000);
 		cy.url().should(
 			'contain',
 			'https://beta-aol-account.ao-qa.com/home/order-history'

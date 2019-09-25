@@ -2,8 +2,6 @@ import LoginPage from '../elements/pages/LoginPage';
 
 const loginPg = new LoginPage();
 
-Cypress.env('RETRIES', 2);
-
 describe('Log in functionality', () => {
 	it('should error when end user inputs an unrecognised email and password', () => {
 		loginPg.visit();

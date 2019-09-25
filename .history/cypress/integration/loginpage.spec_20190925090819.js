@@ -2,15 +2,13 @@ import LoginPage from '../elements/pages/LoginPage';
 
 const loginPg = new LoginPage();
 
-Cypress.env('RETRIES', 2);
-
 describe('Log in functionality', () => {
 	it('should error when end user inputs an unrecognised email and password', () => {
 		loginPg.visit();
 		loginPg.inputEmail('wrong@email.com');
 		loginPg.inputPassword('secret');
 		loginPg.submitLogin();
-		cy.wait(500);
+		cy.wait(2000);
 		loginPg
 			.errorMessage()
 			.should('contain', "We don't recognise this email address or password.");
