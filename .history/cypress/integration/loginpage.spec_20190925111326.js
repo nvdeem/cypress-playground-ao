@@ -1,16 +1,15 @@
-/* Login page tests */
 import LoginPage from '../elements/pages/LoginPage';
 
 const loginPg = new LoginPage();
 
-/* Retry mechanism */
 Cypress.env('RETRIES', 2);
 
-describe('Log in functionality', () => {
-	beforeEach(() => {
-		cy.visit('https://beta-aol-account.ao-qa.com/login');
-	});
+describe ("Go to Log in page", () => {
+    beforeEach(()=>{
+        loginPg.visit();
+    })
 
+describe('Log in functionality', () => {
 	it('should error when end user inputs an unrecognised email and password', () => {
 		loginPg.inputEmail('wrong@email.com');
 		loginPg.inputPassword('secret');

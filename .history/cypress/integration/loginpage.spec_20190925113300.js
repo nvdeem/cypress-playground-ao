@@ -1,4 +1,3 @@
-/* Login page tests */
 import LoginPage from '../elements/pages/LoginPage';
 
 const loginPg = new LoginPage();

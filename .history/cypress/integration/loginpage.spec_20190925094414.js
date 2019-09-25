@@ -1,17 +1,16 @@
-/* Login page tests */
 import LoginPage from '../elements/pages/LoginPage';
 
 const loginPg = new LoginPage();
 
-/* Retry mechanism */
 Cypress.env('RETRIES', 2);
 
-describe('Log in functionality', () => {
-	beforeEach(() => {
-		cy.visit('https://beta-aol-account.ao-qa.com/login');
-	});
+beforeEach(() => {
+	cy.visit('https://beta-aol.ao-qa.com/');
+});
 
+describe('Log in functionality', () => {
 	it('should error when end user inputs an unrecognised email and password', () => {
+		loginPg.visit();
 		loginPg.inputEmail('wrong@email.com');
 		loginPg.inputPassword('secret');
 		loginPg.submitLogin();
@@ -22,6 +21,7 @@ describe('Log in functionality', () => {
 	});
 
 	it('should successfully log in when end user inputs registered email and password', () => {
+		loginPg.visit();
 		loginPg.inputEmail('qatestao@gmail.com');
 		loginPg.inputPassword('&zcX&k0G6N2');
 		loginPg.submitLogin();

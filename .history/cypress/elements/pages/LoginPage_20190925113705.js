@@ -1,5 +1,5 @@
-/* Class contains elements that appear on the Login page,
-	as well as useful interactions with those elements */
+/* Class contains elements that appear on the Login page
+	As well as useful interactions with those elements */
 class LoginPage {
 	constructor() {}
 
