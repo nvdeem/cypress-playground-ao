@@ -4,9 +4,6 @@ import LoginPage from '../../elements/pages/LoginPage';
 const loginPg = new LoginPage();
 const url = 'https://beta-aol-account.ao-qa.com/login';
 
-/* Retry mechanism */
-Cypress.env('RETRIES', 2);
-
 beforeEach(() => {
 	cy.visit(url);
 });
