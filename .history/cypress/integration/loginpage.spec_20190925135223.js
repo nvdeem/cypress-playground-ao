@@ -9,7 +9,7 @@ Cypress.env('RETRIES', 2);
 
 describe('Log in functionality', () => {
 	beforeEach(() => {
-		cy.visit(url);
+		cy.visit();
 	});
 
 	it('should error when end user inputs an unrecognised email and password', () => {

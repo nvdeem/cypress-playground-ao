@@ -20,6 +20,6 @@
 		"prettier-stylelint": "^0.4.2"
 	},
 	"cypress-cucumber-preprocessor": {
-		"nonGlobalStepDefinitions": true
+		"nonGlobalStepDefinitions": false
 	}
 }
