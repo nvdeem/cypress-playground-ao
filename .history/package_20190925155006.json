@@ -20,7 +20,7 @@
 		"prettier-stylelint": "^0.4.2"
 	},
 	"cypress-cucumber-preprocessor": {
-		"nonGlobalStepDefinitions": "test/features/step_definitions/*.js"
+		"nonGlobalStepDefinitions": false
 	},
 	"cucumberautocomplete.steps": [
 		"test/features/step_definitions/*.js",
