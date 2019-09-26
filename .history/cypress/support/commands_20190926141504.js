@@ -24,9 +24,6 @@
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
-// Retry mechanism //
-Cypress.env('RETRIES', 2);
-
 const url = 'https://beta-aol-account.ao-qa.com/login';
 
 beforeEach(function() {

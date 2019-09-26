@@ -1,7 +1,10 @@
 /* Login page tests */
-import LoginPage from '../elements/pages/LoginPage';
+// import LoginPage from '../elements/pages/LoginPage';
 
 const loginPg = new LoginPage();
+
+/* Retry mechanism */
+Cypress.env('RETRIES', 2);
 
 describe('Log in functionality', () => {
 	it('should error when end user inputs an unrecognised email and password', () => {

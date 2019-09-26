@@ -23,25 +23,3 @@
 //
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
-
-// Retry mechanism //
-Cypress.env('RETRIES', 2);
-
-const url = 'https://beta-aol-account.ao-qa.com/login';
-
-beforeEach(function() {
-	cy.visit(url);
-});
-
-afterEach(function() {
-	cy.clearCookies();
-});
-
-Cypress.Commands.add('enterEmailAndPassword', (email, password) => {
-	cy.get('#input-email').type(email);
-	cy.get('#input-password').type(password);
-});
-
-Cypress.Commands.add('submitLogin', () => {
-	cy.get('[data-testid=submit-login]').click();
-});

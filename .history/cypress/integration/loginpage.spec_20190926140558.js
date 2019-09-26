@@ -2,8 +2,20 @@
 import LoginPage from '../elements/pages/LoginPage';
 
 const loginPg = new LoginPage();
+const url = 'https://beta-aol-account.ao-qa.com/login';
+
+/* Retry mechanism */
+Cypress.env('RETRIES', 2);
 
 describe('Log in functionality', () => {
+	beforeEach(() => {
+		cy.visit(url);
+	});
+
+	afterEach(() => {
+		cy.clearCookies();
+	});
+
 	it('should error when end user inputs an unrecognised email and password', () => {
 		cy.enterEmailAndPassword('wrong@email.com', 'secret');
 		cy.submitLogin();

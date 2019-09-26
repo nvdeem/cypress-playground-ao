@@ -1,10 +1,7 @@
+import { Given, And, When, Then } from 'cypress-cucumber-preprocessor/steps';
 /* Contains shared steps, before and after test functionality, 
 	as well as useful interactions with commonly used elements */
 
-import { Given, And, When, Then } from 'cypress-cucumber-preprocessor/steps';
-import LoginPage from '../../elements/pages/LoginPage';
-
-const loginPg = new LoginPage();
 const url = 'https://beta-aol-account.ao-qa.com/login';
 
 // Retry mechanism
@@ -25,6 +22,5 @@ Given('I am on the log in page', () => {
 });
 
 When('I click sign in', () => {
-	loginPg.submitLogin();
-	cy.wait(500);
+	cy.submitLogin();
 });

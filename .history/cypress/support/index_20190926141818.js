@@ -5,3 +5,4 @@ import './commands';
 require('cypress-xpath');
 require('cypress-plugin-retries');
 require('cypress-cucumber-preprocessor/steps');
+require('../elements/pages/LoginPage');

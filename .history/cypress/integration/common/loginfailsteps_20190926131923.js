@@ -4,8 +4,7 @@ import LoginPage from '../../elements/pages/LoginPage';
 const loginPg = new LoginPage();
 
 And('I enter a unrecognised account email and password', () => {
-	loginPg.inputEmail('unrecognised@email.com');
-	loginPg.inputPassword('secret');
+	cy.enterEmailAndPassword('unrecognised@email.com', 'secret');
 });
 
 Then('I will see an error message', () => {
