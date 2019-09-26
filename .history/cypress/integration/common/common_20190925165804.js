@@ -7,7 +7,6 @@ const url = 'https://beta-aol-account.ao-qa.com/login';
 /* Retry mechanism */
 Cypress.env('RETRIES', 2);
 
-// Before and after each test
 beforeEach(() => {
 	cy.visit(url);
 });
@@ -16,7 +15,6 @@ afterEach(() => {
 	cy.clearCookies();
 });
 
-// Common steps
 Given('I am on the log in page', () => {
 	cy.url().should('contain', 'https://beta-aol-account.ao-qa.com/login');
 });
