@@ -7,7 +7,7 @@ import LoginPage from '../../elements/pages/LoginPage';
 const loginPg = new LoginPage();
 const url = 'https://beta-aol-account.ao-qa.com/login';
 
-// Retry mechanism
+/* Retry mechanism */
 Cypress.env('RETRIES', 2);
 
 // Before and after each test
@@ -19,7 +19,7 @@ afterEach(() => {
 	cy.clearCookies();
 });
 
-// Common steps - Log in
+// Common steps
 Given('I am on the log in page', () => {
 	cy.url().should('contain', 'https://beta-aol-account.ao-qa.com/login');
 });
