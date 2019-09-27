@@ -1,0 +1,11 @@
+{
+	"testFiles": "**/*.spec.js",
+	"reporter": "mochawesome",
+	"reporterOptions": {
+		"reportDir": "../cypress-tests/cypress/reports",
+		"quiet": true,
+		"overwrite": false,
+		"html": true,
+		"json": false
+	}
+}

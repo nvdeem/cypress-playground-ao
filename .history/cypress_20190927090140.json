@@ -1,0 +1,10 @@
+{
+	"testFiles": "**/*.spec.js",
+	"reporter": "mochawesome",
+	"reporterOptions": {
+		"reportDir": "report/mocha-reports",
+		"overwrite": false,
+		"html": true,
+		"json": false
+	}
+}

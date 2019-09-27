@@ -1,0 +1,9 @@
+{
+	"testFiles": "**/*.spec.js",
+	“reporter”: “mochawesome”,
+  “reporterOptions”: {
+  “overwrite”: false,
+  “html”: false,
+  “json”: true
+ }
+}
