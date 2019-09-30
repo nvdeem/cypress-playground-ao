@@ -3,6 +3,8 @@
 	"reporter": "mochawesome",
 	"reporterOptions": {
 		"reportDir": "../cypress-tests/cypress/reports",
+		"reportFilename": "test_report",
+		"reportTitle": "Test Run",
 		"quiet": true,
 		"overwrite": false,
 		"html": true,
