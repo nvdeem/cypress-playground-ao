@@ -3,8 +3,9 @@
 	"reporter": "mochawesome",
 	"reporterOptions": {
 		"reportDir": "../cypress-tests/cypress/reports",
-		"reportFilename": "test_report",
-		"reportTitle": "Test Run",
+		"reportFilename": "run",
+		"timestamp": "true",
+		"reportTitle": "Test Automation Report",
 		"quiet": true,
 		"overwrite": false,
 		"html": true,

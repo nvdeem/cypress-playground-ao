@@ -27,7 +27,8 @@
 // Retry mechanism //
 Cypress.env('RETRIES', 2);
 
-const url = 'https://beta-aol-account.ao-qa.com/login';
+const url = 'https://www.ao.com';
+//'https://beta-aol-account.ao-qa.com/login';
 
 beforeEach(function() {
 	cy.visit(url);
