@@ -24,11 +24,12 @@
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
+import { addMatchImageSnapshotCommand } from 'cypress-image-snapshot/command';
+
 // Retry mechanism //
 Cypress.env('RETRIES', 2);
 
-const url = 'https://www.ao.com';
-//'https://beta-aol-account.ao-qa.com/login';
+const url = 'https://beta-aol-account.ao-qa.com/login';
 
 beforeEach(function() {
 	cy.visit(url);
@@ -41,4 +42,10 @@ Cypress.Commands.add('enterEmailAndPassword', (email, password) => {
 
 Cypress.Commands.add('submitLogin', () => {
 	cy.get('[data-testid=submit-login]').click();
+});
+
+addMatchImageSnapshotCommand({
+	capture: 'viewport',
+	failureThresholdType: 'percent',
+	failureThreshold: 0.05
 });
