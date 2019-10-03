@@ -4,11 +4,12 @@
 	"reporterOptions": {
 		"reportDir": "../cypress-tests/cypress/reports",
 		"reportFilename": "run",
-		"timestamp": "true",
-		"reportTitle": "Test Automation Report",
+		"timestamp": "ddmmyyyy_HHMMss",
+		"reportPageTitle": "QA Report",
+		"reportTitle": "Test Automation Run",
 		"quiet": true,
 		"overwrite": false,
-		"html": true,
-		"json": false
+		"html": false,
+		"json": true
 	}
 }

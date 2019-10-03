@@ -2,9 +2,14 @@
 import LoginPage from '../elements/pages/LoginPage';
 
 const loginPg = new LoginPage();
+const url = 'https://beta-aol-account.ao-qa.com/login';
+
+beforeEach(function() {
+	cy.visit(url);
+});
 
 describe('Log in functionality', () => {
-	it.only('should error when end user inputs an unrecognised email and password', () => {
+	it('should error when end user inputs an unrecognised email and password', () => {
 		cy.enterEmailAndPassword('wrong@email.com', 'secret');
 		cy.submitLogin();
 		loginPg
