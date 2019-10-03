@@ -5,7 +5,7 @@ import postSlack from '../reports/functions/PostToSlack';
 Cypress.env('RETRIES', 2);
 
 // -- Test URL -- //
-const url = 'https://beta-aol-account.ao-qa.com/login';
+// const url = 'https://beta-aol-account.ao-qa.com/login';
 
 // -- Hooks --//
 // beforeEach(function() {
