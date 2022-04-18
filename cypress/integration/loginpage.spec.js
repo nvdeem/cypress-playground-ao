@@ -18,7 +18,7 @@ describe('Log in functionality', () => {
 	});
 
 	it('should successfully log in when end user inputs registered email and password', () => {
-		cy.enterEmailAndPassword('qatestao@gmail.com', '&zcX&k0G6N2');
+		cy.enterEmailAndPassword('qatestao@gmail.com', 'pword');
 		cy.submitLogin();
 		cy.url().should('contain', 'https://beta-aol-account.ao-qa.com/home/');
 	});
